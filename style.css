@@ -24,24 +24,24 @@ body {
 main {
   width: 100%;
   max-width: 1000px;
-  padding: 2rem;
+  padding: 32px; 
 }
 
 header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px; 
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 32px; 
+  margin-bottom: 8px; 
 }
 
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .card {
@@ -63,29 +63,29 @@ h1 {
 }
 
 .card-content {
-  padding: 1.2rem;
+  padding: 19.2px; 
 }
 
 .card-content h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
+  font-size: 19.2px; 
+  margin-bottom: 9.6px;
   color: var(--text);
 }
 
 .card-content p {
-  font-size: 0.95rem;
+  font-size: 15.2px; 
   line-height: 1.5;
   color: #4b5563;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .card-content button {
-  padding: 0.5rem 1.2rem;
+  padding: 8px 19.2px; 
   border-radius: 6px;
   border: none;
   background: var(--primary);
   color: white;
-  font-size: 0.9rem;
+  font-size: 14.4px; 
   cursor: pointer;
   transition: all 0.2s ease, transform 0.2s ease;
 }
@@ -98,7 +98,7 @@ h1 {
 /* Middle card */
 .card.featured {
   transform: scale(1.08);
-  z-index: 2;
+
 }
 
 .card:not(.featured) {
