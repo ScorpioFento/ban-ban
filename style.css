@@ -16,78 +16,76 @@
 body {
   background: var(--bg);
   display: flex;
-  align-items: center;
+
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
+ 
 }
 
 main {
   width: 100%;
-  max-width: 1000px;
-  padding: 32px; 
+  max-width: 1200px;
+  padding: 40px 20px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 32px; 
-  margin-bottom: 8px; 
+  font-size: 32px;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .card {
   background: var(--card-bg);
-  width: 280px;
+  width: 300px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 20px var(--shadow);
   transition: transform 0.3s ease;
-  position: relative;
   text-align: center;
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
-  display: block;
 }
 
 .card-content {
-  padding: 19.2px; 
+  padding: 20px;
 }
 
 .card-content h2 {
-  font-size: 19.2px; 
-  margin-bottom: 9.6px;
+  font-size: 20px;
+  margin-bottom: 10px;
   color: var(--text);
 }
 
 .card-content p {
-  font-size: 15.2px; 
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
   color: #4b5563;
   margin-bottom: 16px;
 }
 
 .card-content button {
-  padding: 8px 19.2px; 
+  padding: 10px 20px;
   border-radius: 6px;
   border: none;
   background: var(--primary);
   color: white;
-  font-size: 14.4px; 
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease, transform 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .card-content button:hover {
@@ -95,24 +93,62 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* Middle card */
 .card.featured {
-  transform: scale(1.08);
-
+  transform: scale(1.05);
 }
 
-.card:not(.featured) {
-  transform: scale(0.95);
-  opacity: 0.95;
+
+@media (max-width: 1199px) {
+  .card {
+    width: 260px;
+  }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 991px) {
   .cards {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .card,
+  .card {
+    width: 45%;
+  }
+
   .card.featured {
     transform: scale(1);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .card-content h2 {
+    font-size: 18px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+  }
+
+  .card-content button {
+    width: 100%;
   }
 }
